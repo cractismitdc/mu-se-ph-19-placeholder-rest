@@ -5,7 +5,6 @@ const responseCodes = require('../common/utils/responseCodes')
 
 module.exports.getAllBodyState = catchAsync(async (req, res) => {
     // const options = req.query
-    console.log(req)
     const bodyStateData = await BodyStateService.getAllBodyState(req.query);
     res.status(httpStatus.OK).send(bodyStateData)
 })
