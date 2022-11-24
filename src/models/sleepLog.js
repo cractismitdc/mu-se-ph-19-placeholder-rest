@@ -30,6 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     remSleepDuration: DataTypes.NUMERIC,
     sleepLevel: DataTypes.STRING,
     timeInBed: DataTypes.BIGINT,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'SleepLog',

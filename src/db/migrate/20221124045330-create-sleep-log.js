@@ -55,6 +55,12 @@ module.exports = {
       timeInBed: {
         allowNull: false,
         type: Sequelize.BIGINT
+      },
+      createdAt: {
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        type: Sequelize.DATE
       }
     })
   },
