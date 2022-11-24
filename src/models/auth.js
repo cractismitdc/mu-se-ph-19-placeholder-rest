@@ -17,11 +17,13 @@ module.exports = (sequelize, DataTypes) => {
   Auth.init({
     userId: DataTypes.INTEGER,
     username: DataTypes.STRING,
-    password: DataTypes.STRING
+    password: DataTypes.STRING,
+    createAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Auth',
-    tableName: 'user_credentials'
+    tableName: 'auth'
   });
   return Auth;
 };

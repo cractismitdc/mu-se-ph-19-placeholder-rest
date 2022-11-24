@@ -24,7 +24,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.BIGINT
       },
-      sleepstart: {
+      sleepStart: {
         allowNull: false,
         type: Sequelize.BIGINT
       },

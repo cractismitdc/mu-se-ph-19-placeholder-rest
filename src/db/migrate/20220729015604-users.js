@@ -17,30 +17,19 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      address: {
-        allowNull: false,
-        type: Sequelize.STRING
+      age: {
+        type: Sequelize.INTEGER
       },
-      postalCode: {
-        type: Sequelize.STRING
-      },
-      phone: {
+      registrationDate: {
         allowNull: false,
-        type: Sequelize.STRING,
-      },
-      email: {
-        allowNull: false,
-        type: Sequelize.STRING,
-        unique: true
+        type: Sequelize.DATE,
       },
       createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
+        type: Sequelize.DATE
+      }
     })
   },
 
