@@ -1,4 +1,4 @@
-#how to run
+#how to run -- Hackathon sleep 
 1. clone the repo
 2. run npm install
 3. copyy .env.sample to new file .env with desired credentials
