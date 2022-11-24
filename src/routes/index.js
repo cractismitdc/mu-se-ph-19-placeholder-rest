@@ -3,8 +3,9 @@ const userRouter = require('./v1/users.route');
 const authRouter = require('./v1/auth.route');
 const sleepLogRouter = require('./v1/sleepLog.route');
 const bodyStateRouter = require('./v1/bodyState.route');
+const tipRouter = require('./v1/tip.route');
 const config = require('../config/config');
-const authHandler = require('../middlewares/auth')
+const authHandler = require('../middlewares/auth');
 
 const router = express.Router();
 
@@ -18,16 +19,20 @@ const router = express.Router();
 const devRoutes = [
   {
     path: '/users',
-    route: userRouter,
+    route: userRouter
   },
   {
     path: '/sleepLogs',
-    route: sleepLogRouter,
+    route: sleepLogRouter
   },
   {
     path: '/bodyStates',
-    route: bodyStateRouter,
+    route: bodyStateRouter
   },
+  {
+    path: '/tips',
+    route: tipRouter
+  }
 ];
 
 /* testRoutes.forEach((route) => {
@@ -35,7 +40,7 @@ const devRoutes = [
 }); */
 
 // auth route
-router.use('/auth', authRouter)
+router.use('/auth', authRouter);
 
 if (config.env === 'development') {
   devRoutes.forEach((route) => {

@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
-    await queryInterface.bulkInsert('body-state', [
+    await queryInterface.bulkInsert('body_state', [
       {
         userId: 1,
         steps: 8851,
