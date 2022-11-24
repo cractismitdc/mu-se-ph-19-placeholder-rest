@@ -14,8 +14,8 @@ module.exports = {
           aveSp02: 99,
           aveHeartRate: 72,
           maxHeartRate: 81,
-          remSleepDuration: 2.2,
-          timeInBed: 1668431640000,
+          remSleepDuration: 7920000,
+          timeInBed: 36000000,
           sleepLevel: 'Well-Rested'
         },
         {
@@ -26,7 +26,7 @@ module.exports = {
           aveSp02: 99,
           aveHeartRate: 80,
           maxHeartRate: 89,
-          remSleepDuration: 1.76,
+          remSleepDuration: 6336000,
           timeInBed: 1668608460000,
           sleepLevel: 'Tired'
         },
@@ -102,6 +102,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await queryInterface.bulkDelete('sleep_log', null, {})
+    await queryInterface.bulkDelete('sleep_log', null, {});
   }
 };
