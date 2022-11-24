@@ -15,7 +15,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   SleepLog.init({
-    id: DataTypes.INTEGER,
+    id: {
+      type:DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     userId: DataTypes.INTEGER,
     dateOfSleep: DataTypes.BIGINT,
     sleepStart: DataTypes.BIGINT,
@@ -26,6 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     remSleepDuration: DataTypes.NUMERIC,
     sleepLevel: DataTypes.STRING,
     timeInBed: DataTypes.BIGINT,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'SleepLog',

@@ -26,12 +26,15 @@ const AuthService = {
         if ( !rToken ) AuthService.throwAuthFailed()
         jwt.verify(rToken, jwtc.refreshToken, (err, user) => {
             if ( !rToken ) AuthService.throwAuthFailed()
-            accessToken = AuthService.generateAccessToken({ name: user.name })
+            accessToken = AuthService.generateAccessToken({ 
+                name: user.name, 
+                newExpiry: (new Date().getTime() + 3000000) 
+            })
         })
         return accessToken
     },
-    generateAccessToken: (user) => {
-        return jwt.sign(user, jwtc.secret, { expiresIn: jwtc.tokenExpiration })
+    generateAccessToken: (user, newExpiry) => {
+        return jwt.sign(user, jwtc.secret, { expiresIn: newExpiry || jwtc.tokenExpiration })
     },
     throwAuthFailed: () => {
         throw new ApiError(

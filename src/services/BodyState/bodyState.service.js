@@ -4,7 +4,7 @@ const responseCodes = require('../../common/utils/responseCodes')
 const { BodyState } = require('../../models/index')
 const { Op } = require("sequelize")
 
-const BodyStateServices = {
+const BodyStateService = {
     // TODO: CRUD Operations for Body State
     getAllBodyState: async (options) => {
         console.log("getting list of body state")
@@ -42,4 +42,4 @@ const BodyStateServices = {
     }
 }
 
-module.exports = BodyStateServices
+module.exports = BodyStateService

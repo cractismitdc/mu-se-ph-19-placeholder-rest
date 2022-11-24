@@ -3,7 +3,7 @@ const ApiError = require('../../common/utils/ApiError')
 const responseCodes = require('../../common/utils/responseCodes')
 const { SleepLog } = require('../../models/index')
 
-const SleepLogServices = {
+const SleepLogService = {
     // TODO: CRUD Operations for Sleep Log
     getAllSleepLog: async (options) => {
         console.log("getting list of sleep log")
@@ -40,4 +40,4 @@ const SleepLogServices = {
     }
 }
 
-module.exports = SleepLogServices
+module.exports = SleepLogService

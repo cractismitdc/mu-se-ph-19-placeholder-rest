@@ -15,11 +15,17 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   BodyState.init({
-    id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     userId: DataTypes.INTEGER,
     steps: DataTypes.INTEGER,
     intensity: DataTypes.INTEGER,
     createTime: DataTypes.BIGINT,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'BodyState',

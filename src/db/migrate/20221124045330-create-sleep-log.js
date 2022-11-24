@@ -24,7 +24,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.BIGINT
       },
-      sleepstart: {
+      sleepStart: {
         allowNull: false,
         type: Sequelize.BIGINT
       },
@@ -55,6 +55,12 @@ module.exports = {
       timeInBed: {
         allowNull: false,
         type: Sequelize.BIGINT
+      },
+      createdAt: {
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        type: Sequelize.DATE
       }
     })
   },
