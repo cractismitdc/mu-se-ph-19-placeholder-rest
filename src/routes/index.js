@@ -1,6 +1,8 @@
 const express = require('express');
 const userRouter = require('./v1/users.route');
 const authRouter = require('./v1/auth.route');
+const sleepLogRouter = require('./v1/sleepLog.route');
+const bodyStateRouter = require('./v1/bodyState.route');
 const config = require('../config/config');
 const authHandler = require('../middlewares/auth')
 
@@ -15,8 +17,16 @@ const router = express.Router();
 
 const devRoutes = [
   {
-    path: '/user',
+    path: '/users',
     route: userRouter,
+  },
+  {
+    path: '/sleepLogs',
+    route: sleepLogRouter,
+  },
+  {
+    path: '/bodyStates',
+    route: bodyStateRouter,
   },
 ];
 
