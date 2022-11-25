@@ -1,4 +1,4 @@
-#how to run -- Hackathon sleep 
+#how to run -- Hackathon sleep slumbrr
 1. clone the repo
 2. run npm install
 3. copyy .env.sample to new file .env with desired credentials

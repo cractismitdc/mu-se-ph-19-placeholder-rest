@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     dateOfSleep: DataTypes.BIGINT,
     sleepStart: DataTypes.BIGINT,
     sleepEnd: DataTypes.BIGINT,
-    aveSpO2: DataTypes.SMALLINT,
+    aveSp02: DataTypes.SMALLINT,
     aveHeartRate: DataTypes.SMALLINT,
     maxHeartRate: DataTypes.SMALLINT,
     remSleepDuration: DataTypes.NUMERIC,

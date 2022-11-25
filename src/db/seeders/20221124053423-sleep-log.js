@@ -14,9 +14,9 @@ module.exports = {
           aveSp02: 99,
           aveHeartRate: 72,
           maxHeartRate: 81,
-          remSleepDuration: 2.2,
-          timeInBed: 1668431640000,
-          sleepLevel: "Well-Rested",
+          remSleepDuration: 7920000,
+          timeInBed: 36000000,
+          sleepLevel: 'Well-Rested'
         },
         {
           userId: 1,
@@ -26,9 +26,9 @@ module.exports = {
           aveSp02: 99,
           aveHeartRate: 80,
           maxHeartRate: 89,
-          remSleepDuration: 1.76,
+          remSleepDuration: 6336000,
           timeInBed: 1668608460000,
-          sleepLevel: "Tired",
+          sleepLevel: 'Tired'
         },
         {
           userId: 1,
@@ -40,7 +40,7 @@ module.exports = {
           maxHeartRate: 81,
           remSleepDuration: 1.76,
           timeInBed: 1668707100000,
-          sleepLevel: "Exhausted",
+          sleepLevel: 'Exhausted'
         },
         {
           userId: 1,
@@ -52,7 +52,7 @@ module.exports = {
           maxHeartRate: 81,
           remSleepDuration: 1.98,
           timeInBed: 1668777300000,
-          sleepLevel: "Well-Rested",
+          sleepLevel: 'Well-Rested'
         },
         {
           userId: 1,
@@ -64,7 +64,7 @@ module.exports = {
           maxHeartRate: 87,
           remSleepDuration: 2.2,
           timeInBed: 1668952260000,
-          sleepLevel: "Well-Rested",
+          sleepLevel: 'Well-Rested'
         },
         {
           userId: 1,
@@ -76,7 +76,7 @@ module.exports = {
           maxHeartRate: 81,
           remSleepDuration: 1.76,
           timeInBed: 1669129860000,
-          sleepLevel: "Well-Rested",
+          sleepLevel: 'Well-Rested'
         },
         {
           userId: 1,
@@ -88,8 +88,8 @@ module.exports = {
           maxHeartRate: 85,
           remSleepDuration: 1.1,
           timeInBed: 1669226760000,
-          sleepLevel: "Exhausted",
-        },
+          sleepLevel: 'Exhausted'
+        }
       ],
       {}
     );
@@ -102,6 +102,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await queryInterface.bulkDelete("sleep_log", null, {});
-  },
+    await queryInterface.bulkDelete('sleep_log', null, {});
+  }
 };
