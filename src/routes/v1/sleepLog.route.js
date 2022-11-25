@@ -10,6 +10,8 @@ router
     .get('/', sleepLogController.getAllSleepLog)
     .post('/', sleepLogController.createSleepLog)
     .get('/:id', sleepLogController.getSleepLog)
+    .get('/leaderboard', sleepLogController.getSleepLeaderboard)
+    .get('/:id/streak', sleepLogController.getSleepStreak)
     .put('/:id', sleepLogController.updateSleepLog)
     .delete('/:id', sleepLogController.deleteUser)
 
