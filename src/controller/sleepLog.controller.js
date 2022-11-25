@@ -19,6 +19,16 @@ module.exports.getSleepLog = catchAsync(async (req, res) => {
     res.status(httpStatus.FOUND).send({ status: httpStatus.FOUND, code: responseCodes.RECORD_FOUND.value, data: sleepLogData })
 })
 
+module.exports.getSleepLeaderboard = catchAsync(async (req, res) => {
+    const sleepLogData = await SleepLogService.sleepLeaderboard()
+    res.status(httpStatus.OK).send({status: httpStatus.OK, code: responseCodes.RETRIEVE_RECORD_LIST.value, data: sleepLogData})
+})
+
+module.exports.getSleepStreak = catchAsync(async (req, res) => {
+    const sleepLogData = await SleepLogService.sleepStreak(req.params.id)
+    res.status(httpStatus.FOUND).send({status: httpStatus.FOUND, code: responseCodes.RECORD_FOUND.value, data: sleepLogData})
+})
+
 module.exports.updateSleepLog = catchAsync(async (req, res) => {
     const sleepLogData = (await SleepLogService.updateSleepLog(req.params.id, req.body))[1].get()
     res.status(httpStatus.OK).send({ status: httpStatus.OK, code: responseCodes.UPDATE_RECORD_SUCCESS.value, data: { ...sleepLogData } })
