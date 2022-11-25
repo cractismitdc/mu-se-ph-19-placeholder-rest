@@ -2,7 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     /**
      * Add altering commands here.
      *
@@ -14,7 +14,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       userId: {
         allowNull: false,
@@ -32,7 +32,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.BIGINT
       },
-      aveSp02: {
+      aveSpO2: {
         allowNull: false,
         type: Sequelize.SMALLINT
       },
@@ -62,16 +62,16 @@ module.exports = {
       updatedAt: {
         type: Sequelize.DATE
       }
-    })
+    });
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     /**
      * Add reverting commands here.
      *
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable('sleep_log')
+    await queryInterface.dropTable('sleep_log');
   }
 };
